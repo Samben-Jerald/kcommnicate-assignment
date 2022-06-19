@@ -1,0 +1,104 @@
+@import '../Abstract/variable';
+
+.appsetting {
+  width: 90%;
+  margin: 5rem auto 5rem auto;
+
+  & h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.2rem;
+    color: $light-black;
+  }
+
+  & p {
+    font-size: 1.9rem;
+    color: $light-black;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: 3rem;
+    width: 100%;
+    margin-top: 3rem;
+    justify-content: space-between;
+    @media all and (max-width: 900px) {
+      flex-direction: column-reverse;
+    }
+    &_1 {
+      padding: 1.2rem 0 0 1.8rem;
+      &ul {
+        padding: 2rem 0 0 2rem;
+      }
+      & ul li {
+        font-size: 1.8rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__card {
+    width: 100%;
+    background-color: $light-violet;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+    border: $light-grey-2 1px solid;
+    border-radius: 4px;
+    margin: 2rem 0 5rem 0;
+    @media all and (max-width: 900px) {
+      width: 100%;
+    }
+    & h3 {
+      color: $light-grey;
+      font-size: 1.6rem;
+    }
+
+    & input {
+      padding: 1.4rem 1.3rem;
+      width: 60%;
+      border: 0.5px solid $light-grey-2;
+      border-radius: 2px;
+      caret-color: $light-grey-2;
+
+      @media all and (max-width: 900px) {
+        width: 80%;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  &__footer {
+    & p {
+      font-size: 1.2rem;
+      color: $light-grey;
+      padding: 1rem 0 1rem 1.5rem;
+    }
+  }
+}
+
+.chatbox {
+  max-width: 100%;
+
+  text-align: center;
+  &__image {
+    @media all and (max-width: 900px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.error {
+  color: red !important;
+  font-size: 1.5rem !important;
+}
+
+.success {
+  color: green !important;
+  font-size: 1.5rem !important;
+}
